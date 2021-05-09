@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:ecommerce_store_admin/blocs/sign_in_bloc/sign_in_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -71,7 +73,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Timer(Duration(milliseconds: 0), () {
+    // Timer(Duration(milliseconds: 20000), () {
     //   Navigator.popAndPushNamed(context, '/sign_in');
     // });
     Size size = MediaQuery.of(context).size;
@@ -82,7 +84,8 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset('assets/icons/splas.jpeg',
+            Image.asset('assets/icons/splash.jpeg',
+                fit: BoxFit.cover,
                 height: MediaQuery.of(context).size.height,
                 width: MediaQuery.of(context).size.width),
           ],

@@ -496,33 +496,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              ListTile(
-                onTap: () {
-                  setState(() {
-                    _selectedPage = 9;
-                    Navigator.pop(context);
-                    _pageController.jumpToPage(9);
-                    _title = 'Payment Method Settings';
-                  });
-                },
-                leading: Icon(
-                  Icons.attach_money_sharp,
-                  size: 23.0,
-                  color: _selectedPage == 9
-                      ? Theme.of(context).primaryColor
-                      : Colors.black87,
-                ),
-                title: Text(
-                  'Payment Method Settings',
-                  style: GoogleFonts.poppins(
-                    color: _selectedPage == 9
-                        ? Theme.of(context).primaryColor
-                        : Colors.black87,
-                    fontSize: 14.0,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),
+
               ListTile(
                 onTap: () {
                   setState(() {
@@ -651,10 +625,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: size.width,
                 decoration: BoxDecoration(
                   color: Theme.of(context).primaryColor,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(20.0),
-                    bottomRight: Radius.circular(20.0),
-                  ),
                 ),
                 child: SafeArea(
                   bottom: false,
